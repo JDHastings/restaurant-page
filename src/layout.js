@@ -1,42 +1,28 @@
-// Make the DOM layout here
-
-const content = document.createElement('div');
-content.setAttribute('id', 'content');
-document.body.append(content);
+import htmlFactory from './htmlFactory'
 
 //header
-const header = document.createElement('header');
-content.append(header);
 
-// Restaurant Name
-const title = document.createElement('div');
-title.classList.add('title');
-title.textContent = 'Rosati\'s';
-header.append(title);
-
+// Restaurant Title
+const title = htmlFactory('div', {class: 'title'}, 'Rosati\'s');
 
 // tab buttons
-const tab1 = document.createElement('button');
-const tab2 = document.createElement('button');
-const tab3 = document.createElement('button');
-tab1.classList.add('home');
-tab2.classList.add('menu');
-tab3.classList.add('contact');
-tab1.textContent = 'Home';
-tab2.textContent = 'Menu';
-tab3.textContent = 'Contact';
-header.append(tab1);
-header.append(tab2);
-header.append(tab3);
+const tab1 = htmlFactory('button', {class: 'home'}, 'Home');
+const tab2 = htmlFactory('button', {class: 'menu'}, 'Menu');
+const tab3 = htmlFactory('button', {class: 'contact'}, 'Contact');
 
+const header = htmlFactory('header', {}, title, tab1, tab2, tab3);
 
-const body = document.createElement ('div');
-body.classList.add('body');
-body.textContent = "Hey, I\'m the Body!";
-content.append(body);
+// body
 
+// grid layout
+const nothing = htmlFactory('div', {class: 'none'});
+const bodyContent = htmlFactory('div', {class: 'body-content'});
+const nothing2 = htmlFactory('div', {class: 'none'});
 
+const body = htmlFactory('div', {class: 'body'}, nothing, bodyContent, nothing2);
 
+// footer
+const footer = htmlFactory('footer', {}, 'Coypright 2023 JDHastings');
 
-const footer = document.createElement('footer');
-content.append(footer);
+const content = htmlFactory('div', {id: 'content'}, header, body, footer);
+document.body.append(content);

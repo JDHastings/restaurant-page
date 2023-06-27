@@ -9,14 +9,15 @@ body {
 
 #content {
     display: grid;
-    grid-template: 200px 1fr 100px / 1fr;
+    grid-template: 200px 1fr 50px / 1fr;
     background: url(./images/pizza.jpeg);
+    background-repeat: repeat;
     height: 100vh;
 }
 
 header {
     background-color: black;
-    opacity: 70%;
+    opacity: 80%;
     height: 200px;
     display: grid;
     grid-template: 1fr 1fr / repeat(3, 100px);
@@ -44,7 +45,8 @@ header>button {
     color: white;
 }
 
-header>button:focus {
+header>button:focus,
+.active {
     border-bottom: 2px solid white;
 }
 
@@ -53,9 +55,29 @@ header>button:hover {
 }
 
 .body {
-    background-color: green;
+    display: grid;
+    grid-template: 1fr / 1fr 2fr 1fr;
+}
+
+.body-content {
+    background-color: black;
+    opacity: 80%;
+    border-radius: 10px;
+    margin: 50px 0;
+    box-shadow: 0 0 10px white;
+}
+
+.container{
+    color: white;
 }
 
 footer {
-    background-color: orange;
+    background-color: black;
+    opacity: 80%;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
