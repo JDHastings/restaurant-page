@@ -1,0 +1,61 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#content {
+    display: grid;
+    grid-template: 200px 1fr 100px / 1fr;
+    background: url(./images/pizza.jpeg);
+    height: 100vh;
+}
+
+header {
+    background-color: black;
+    opacity: 70%;
+    height: 200px;
+    display: grid;
+    grid-template: 1fr 1fr / repeat(3, 100px);
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    font-size: 70px;
+}
+
+header>button {
+    height: 50px;
+    border: none;
+    background: none;
+    padding: 0px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition-duration: .25s;
+    color: white;
+}
+
+header>button:focus {
+    border-bottom: 2px solid white;
+}
+
+header>button:hover {
+    transform: translateY(-5px);
+}
+
+.body {
+    background-color: green;
+}
+
+footer {
+    background-color: orange;
+}
