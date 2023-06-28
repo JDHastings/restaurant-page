@@ -3,14 +3,16 @@ import './layout.js';
 
 import home from './home';
 import menu from './menu';
+import contact from './contact';
 
 const buttons = document.querySelectorAll('button');
 
 const homepage = new home;
 const menupage = new menu;
+const contactpage = new contact;
 
-menupage.load();
-document.querySelector('.menu').classList.toggle('active');
+homepage.load();
+document.querySelector('.home').classList.toggle('active');
 
 function unload(){
     const body = document.querySelector('.body-content').firstChild;
@@ -36,5 +38,6 @@ buttons.forEach(button => button.addEventListener('click', () => {
     }else if(button.classList.contains('contact')){
         unload();
         button.classList.toggle('active');
+        contactpage.load();
     }
 }));

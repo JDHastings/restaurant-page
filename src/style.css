@@ -12,7 +12,8 @@ body {
     grid-template: 200px 1fr 50px / 1fr;
     background: url(./images/pizza.jpeg);
     background-repeat: repeat;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 header {
@@ -77,8 +78,94 @@ header>button:hover {
     height: 100%;
 }
 
-.menu-container {
+.contact-container{
     color: white;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template: repeat(4, 1fr)  / 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-container {
+    display: grid;
+    grid-template: repeat(auto-fill, 200px) / repeat(2, 1fr);
+    padding: 5px;
+    gap: 5px;
+}
+
+.menu-item {
+    display: grid;
+    grid-template: 1fr 1.5rem 1fr / 1fr;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.menu-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#bacon-tomato-olive {
+    background: url(./images/bacon-tomato-olive.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#brocc {
+    background: url(./images/brocc.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#hawiian {
+    background: url(./images/hawiian.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#pepperoni {
+    background: url(./images/pepperoni.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#shrimp {
+    background: url(./images/shrimp.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#spicy {
+    background: url(./images/spicy.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#tomato-basil {
+    background: url(./images/tomato-basil.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#tomato-mushroom {
+    background: url(./images/tomato-mushroom.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#veg {
+    background: url(./images/veg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.menu-image {
+    width: 90px;
+    height: 90px;
 }
 
 .pizza {
