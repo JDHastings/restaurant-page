@@ -67,8 +67,27 @@ header>button:hover {
     box-shadow: 0 0 10px white;
 }
 
-.container{
+.home-container{
     color: white;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template: repeat(4, 1fr)  / 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-container {
+    color: white;
+}
+
+.pizza {
+    background: url(./images/pizza.jpeg);
+    background-size: 100%;
+    width: 200px;
+    height: 100%;
+    background-repeat: no-repeat;
+
 }
 
 footer {
