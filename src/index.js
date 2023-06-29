@@ -1,17 +1,13 @@
 import './style.css';
 import './layout.js';
 
-import home from './home';
-import menu from './menu';
-import contact from './contact';
+import page from './pages';
 
 const buttons = document.querySelectorAll('button');
 
-const homepage = new home;
-const menupage = new menu;
-const contactpage = new contact;
+const pages = new page;
 
-homepage.load();
+pages.loadHome();
 document.querySelector('.home').classList.toggle('active');
 
 function unload(){
@@ -30,14 +26,14 @@ buttons.forEach(button => button.addEventListener('click', () => {
     if(button.classList.contains('home')){
         unload();
         button.classList.toggle('active');
-        homepage.load();
+        pages.loadHome();
     }else if(button.classList.contains('menu')){
         unload();
         button.classList.toggle('active');
-        menupage.load();
+        pages.loadMenu();
     }else if(button.classList.contains('contact')){
         unload();
         button.classList.toggle('active');
-        contactpage.load();
+        pages.loadContact();
     }
 }));
